@@ -126,3 +126,37 @@
 </div>
 </form>
 <!--end modal-->
+
+
+<script type="text/javascript">
+   j(document).ready(function() {
+
+  //add fields
+      j(".addmore").click(function(){ 
+          var html = j(".copy-fields").html();
+          j(".after-add-more").after(html);
+      });
+//remove appended fields
+      j("body").on("click",".remove",function(){ 
+          j(this).parents(".control-group").remove();
+      });
+    });
+
+</script>
+
+<script type="text/javascript">
+    j(document).ready(function() {
+ 
+  //add fields for bacte
+      j(".addmore2").click(function(){ 
+          var html = j(".copy-fields2").html();
+          j(".after-add-more2").after(html);
+      });
+//remove appended fields for bacte
+      j("body").on("click",".remove2",function(){ 
+          j(this).parents(".control-group").remove();
+      });
+ 
+    });
+ 
+</script>

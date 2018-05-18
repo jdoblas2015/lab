@@ -127,7 +127,29 @@
 </form>
 <!--end modal-->
 
+<!--ajax code-->
+ <script>
+    $(document).ready(function(){
+      $("#btnsamp2").click(function(){
+          $.ajax({
+                url:'insamp2.php', 
+                method:'POST',
+                data: $('input[name="parnam[]"]').serialize() + '&' + $('input[name="parnam[]"]').serialize() + '&' + $('input[name="parval[]"]').serialize()
+                + '&' + $('input[name="bacnam[]"]').serialize() + '&' + $('input[name="bacval[]"]').serialize()
+                + '&' + $('input[name="contid"]').serialize() + '&' + $('input[name="sampno"]').serialize()
+                + '&' + $('input[name="statno"]').serialize() + '&' + $('input[name="statname"]').serialize()
+                + '&' + $('input[name="coltime"]').serialize(),
 
+                   success:function(data){
+                       alert(data);
+                   }
+                });
+            });
+        });
+</script>
+<!--end ajax code-->
+
+<!--start dynamic textboxes-->
 <script type="text/javascript">
    j(document).ready(function() {
 
@@ -158,5 +180,5 @@
       });
  
     });
- 
 </script>
+<!--end dynamic-->
